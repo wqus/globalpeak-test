@@ -1,0 +1,291 @@
+{
+  "checked_at": "2026-11-03T09:31:54.190869+00:00",
+  "site": "https://wqus.github.io/globalpeak-test/",
+  "repository": "https://github.com/wqus/globalpeak-test",
+  "authenticated": false,
+  "success": true,
+  "resources_checked": 42,
+  "failed": [],
+  "candidate_start_date_present": true,
+  "public_links_present": true,
+  "original_photo_hashes": [
+    {
+      "file": "01-front.png",
+      "ok": true
+    },
+    {
+      "file": "02-entrance.png",
+      "ok": true
+    },
+    {
+      "file": "03-terrace.png",
+      "ok": true
+    },
+    {
+      "file": "04-facade.png",
+      "ok": true
+    },
+    {
+      "file": "05-context.png",
+      "ok": true
+    },
+    {
+      "file": "06-rear.png",
+      "ok": true
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://github.com/wqus/globalpeak-test",
+      "status": 200,
+      "final_url": "https://github.com/wqus/globalpeak-test",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/asset-manifest.json",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/asset-manifest.json",
+      "mime": "application/json"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/build.json",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/build.json",
+      "mime": "application/json"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/daily-report-2026-11-01.csv",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/daily-report-2026-11-01.csv",
+      "mime": "text/csv"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/daily-report-2026-11-02.csv",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/daily-report-2026-11-02.csv",
+      "mime": "text/csv"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/daily-report-2026-11-03.csv",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/daily-report-2026-11-03.csv",
+      "mime": "text/csv"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/monitoring.json",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/monitoring.json",
+      "mime": "application/json"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/publication.json",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/publication.json",
+      "mime": "application/json"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/verification.json",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/verification.json",
+      "mime": "application/json"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/app.js",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/app.js",
+      "mime": "application/javascript"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/02-entrance.png",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/02-entrance.png",
+      "mime": "image/png"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/04-facade.png",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/04-facade.png",
+      "mime": "image/png"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/05-context.png",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/05-context.png",
+      "mime": "image/png"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/06-rear.png",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/06-rear.png",
+      "mime": "image/png"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/evidence/01-overview.jpg",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/evidence/01-overview.jpg",
+      "mime": "image/jpeg"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/evidence/02-monitoring.jpg",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/evidence/02-monitoring.jpg",
+      "mime": "image/jpeg"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/evidence/04-publication-timeout.jpg",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/evidence/04-publication-timeout.jpg",
+      "mime": "image/jpeg"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/evidence/05-publication-validation.jpg",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/evidence/05-publication-validation.jpg",
+      "mime": "image/jpeg"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/mark.svg",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/mark.svg",
+      "mime": "image/svg+xml"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/poster.svg",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/poster.svg",
+      "mime": "image/svg+xml"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/creative.html",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/creative.html",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/daily-report.csv",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/daily-report.csv",
+      "mime": "text/csv"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/notes/01-monitoring.html",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/notes/01-monitoring.html",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/notes/02-creative.html",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/notes/02-creative.html",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/notes/03-publication.html",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/notes/03-publication.html",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/notes/README.html",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/notes/README.html",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/notes/ai-log.html",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/notes/ai-log.html",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/notes/sources.html",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/notes/sources.html",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/notes/worklog.html",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/notes/worklog.html",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/styles.css",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/styles.css",
+      "mime": "text/css"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/01-front.png",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/01-front.png",
+      "mime": "image/png"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/01-monitoring.md",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/01-monitoring.md",
+      "mime": "text/markdown"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/02-creative.md",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/02-creative.md",
+      "mime": "text/markdown"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/03-publication.md",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/03-publication.md",
+      "mime": "text/markdown"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/README.md",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/README.md",
+      "mime": "text/markdown"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/ai-log.md",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/ai-log.md",
+      "mime": "text/markdown"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/sources.md",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/sources.md",
+      "mime": "text/markdown"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/data/worklog.md",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/data/worklog.md",
+      "mime": "text/markdown"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/index.html",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/index.html",
+      "mime": "text/html"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/notes.css",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/notes.css",
+      "mime": "text/css"
+    },
+    {
+      "url": "https://wqus.github.io/globalpeak-test/assets/03-terrace.png",
+      "status": 200,
+      "final_url": "https://wqus.github.io/globalpeak-test/assets/03-terrace.png",
+      "mime": "image/png"
+    }
+  ]
+}

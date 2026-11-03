@@ -1,0 +1,53 @@
+{
+  "id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+  "version": 7,
+  "educational": true,
+  "facts": {
+    "address": {
+      "value": "Учебный город, Тестовая улица, 12, помещение 2",
+      "verification": "confirmed",
+      "conflict": false,
+      "source": "educational-fixture"
+    },
+    "area_m2": {
+      "value": 118,
+      "verification": "confirmed",
+      "conflict": false,
+      "source": "educational-fixture"
+    },
+    "price_rub": {
+      "value": 24000000,
+      "verification": "confirmed",
+      "conflict": false,
+      "source": "educational-fixture"
+    },
+    "category": {
+      "value": "commercial",
+      "verification": "confirmed",
+      "conflict": false,
+      "source": "educational-fixture"
+    },
+    "deal_type": {
+      "value": "sale",
+      "verification": "confirmed",
+      "conflict": false,
+      "source": "educational-fixture"
+    }
+  },
+  "description": "Учебное торговое помещение. Все сведения и стоимость вымышлены. Не публиковать.",
+  "images": [
+    {
+      "asset_id": "demo-front-01",
+      "rights_confirmed": true,
+      "mime": "image/jpeg",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "advertising": {},
+  "approval": {
+    "approved": true,
+    "by": "demo-reviewer",
+    "for_content_hash": "b19a1ea023515231969243cd07505469886d959e5b3f7926f4633b6966abde5b"
+  }
+}

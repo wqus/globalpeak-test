@@ -1,0 +1,51 @@
+name: Verify and publish report
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+      - name: Read Pages configuration
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build public report
+        env:
+          REPORT_PUBLIC_URL: ${{ steps.pages.outputs.base_url }}
+          REPORT_REPOSITORY_URL: https://github.com/${{ github.repository }}
+        run: python -m tools.build --public-url "$REPORT_PUBLIC_URL" --repo-url "$REPORT_REPOSITORY_URL"
+      - name: Verify tests, assets and internal links
+        run: python -m tools.verify
+      - name: Upload report only
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+          include-hidden-files: true
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish verified report
+        id: deployment
+        uses: actions/deploy-pages@v4

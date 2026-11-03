@@ -1,0 +1,44 @@
+.note-header, .note-footer {
+  max-width: 1120px;
+  margin: auto;
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+}
+.note-body { max-width: 1120px; padding: 32px 32px 45px; margin: auto; }
+.note-body h1 { font-size: 30px; letter-spacing: -.4px; margin: 0 0 24px; }
+.note-body h2 { font-size: 23px; margin: 32px 0 16px; border-top: 1px solid var(--line); padding-top: 26px; }
+.note-body h3 { font-size: 18px; margin: 24px 0 14px; }
+.note-body p { font-size: 15px; line-height: 1.65; margin: 14px 0; max-width: 78ch; }
+.note-body li { font-size: 14px; line-height: 1.65; margin: 9px 0; }
+.note-body ul, .note-body ol { padding-left: 23px; max-width: 80ch; }
+.note-body a { overflow-wrap: anywhere; }
+.note-body code { font: 13px/1.6 Consolas,monospace; background: #f0f2f4; border-radius: 2px; padding: 2px 4px; overflow-wrap: anywhere; }
+.note-body pre { padding: 16px; background: #f0f2f4; overflow-x: auto; }
+.note-body pre code { padding: 0; }
+.note-table { overflow-x: auto; margin: 22px 0; }
+.note-table table { font-size: 13px; min-width: 650px; line-height: 1.6; }
+.note-table td, .note-table th { padding: 12px 14px; min-width: 100px; }
+.note-table th { font-size: 12px; background: #f6f7f8; }
+.note-footer { border-top: 1px solid var(--line); border-bottom: 0; color: var(--muted); }
+@media (max-width:600px) {
+  .note-header, .note-footer { padding: 16px; font-size: 12px; }
+  .note-body { padding: 24px 16px 35px; }
+  .note-body h1 { font-size: 26px; }
+  .note-body h2 { font-size: 21px; margin-top: 26px; padding-top: 22px; }
+  .note-body p { font-size: 14px; }
+  .note-body li { font-size: 14px; }
+  .note-footer { flex-wrap: wrap; }
+}
+@media print {
+  .note-header, .note-footer { display: none; }
+  .note-body { max-width: none; padding: 0; }
+  .note-body h1 { font-size: 22pt; }
+  .note-body h2 { font-size: 16pt; }
+  .note-body p, .note-body li { font-size: 10pt; }
+  .note-table table { font-size: 8pt; min-width: 0; }
+  .note-table tr { break-inside: avoid; }
+}

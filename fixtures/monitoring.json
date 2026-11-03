@@ -1,0 +1,236 @@
+[
+  {
+    "run_id": "2026-11-01",
+    "captured_at": "2026-11-01T08:00:00+03:00",
+    "sources": {
+      "partner-a": {
+        "status": "ok",
+        "complete": true,
+        "expected_min": 3
+      },
+      "partner-b": {
+        "status": "ok",
+        "complete": true,
+        "expected_min": 3
+      }
+    },
+    "listings": [
+      {
+        "source": "partner-a",
+        "listing_id": "A101",
+        "url": "https://example.invalid/partner-a/A101",
+        "address": "Учебный город, Лесная 10, пом. 1",
+        "area_m2": 110,
+        "price_rub": 22000000,
+        "description": "ГАБ с арендатором — продукты",
+        "unit_cadastral_id": "DEMO-UNIT-01",
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-b",
+        "listing_id": "B901",
+        "url": "https://example.invalid/partner-b/B901",
+        "address": "Учебный город, Лесная 10, пом. 1",
+        "area_m2": 110,
+        "price_rub": 22500000,
+        "description": "Действующий арендатор",
+        "unit_cadastral_id": "DEMO-UNIT-01",
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-a",
+        "listing_id": "A102",
+        "url": "https://example.invalid/partner-a/A102",
+        "address": "Учебный город, Полевая 8, пом. 2",
+        "area_m2": 82,
+        "price_rub": 12000000,
+        "description": "Без арендатора. Свободное помещение",
+        "unit_cadastral_id": "DEMO-UNIT-02",
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-b",
+        "listing_id": "B902",
+        "url": "https://example.invalid/partner-b/B902",
+        "address": "Учебный город, Парковая 4",
+        "area_m2": 200,
+        "price_rub": null,
+        "description": "Торговое помещение",
+        "unit_cadastral_id": null,
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-b",
+        "listing_id": "B903",
+        "url": "https://example.invalid/partner-b/B903",
+        "address": "Учебный город, Парковая 4",
+        "area_m2": 201,
+        "price_rub": 30000000,
+        "description": "ГАБ. Помещение свободно",
+        "unit_cadastral_id": null,
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-a",
+        "listing_id": "A103",
+        "url": "https://example.invalid/partner-a/A103",
+        "address": "Учебный город, Южная 3",
+        "area_m2": 66,
+        "price_rub": 9500000,
+        "description": "ГАБ с арендатором",
+        "unit_cadastral_id": null,
+        "status": "listed",
+        "educational": true
+      }
+    ]
+  },
+  {
+    "run_id": "2026-11-02",
+    "captured_at": "2026-11-02T08:00:00+03:00",
+    "sources": {
+      "partner-a": {
+        "status": "ok",
+        "complete": true,
+        "expected_min": 3
+      },
+      "partner-b": {
+        "status": "ok",
+        "complete": true,
+        "expected_min": 3
+      }
+    },
+    "listings": [
+      {
+        "source": "partner-a",
+        "listing_id": "A101",
+        "url": "https://example.invalid/partner-a/A101",
+        "address": "Учебный город, Лесная 10, пом. 1",
+        "area_m2": 110,
+        "price_rub": 21000000,
+        "description": "ГАБ с арендатором — продукты",
+        "unit_cadastral_id": "DEMO-UNIT-01",
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-b",
+        "listing_id": "B901",
+        "url": "https://example.invalid/partner-b/B901",
+        "address": "Учебный город, Лесная 10, пом. 1",
+        "area_m2": 110,
+        "price_rub": 22500000,
+        "description": "Действующий арендатор",
+        "unit_cadastral_id": "DEMO-UNIT-01",
+        "status": "withdrawn_by_source",
+        "educational": true
+      },
+      {
+        "source": "partner-b",
+        "listing_id": "B902",
+        "url": "https://example.invalid/partner-b/B902",
+        "address": "Учебный город, Парковая 4",
+        "area_m2": 200,
+        "price_rub": null,
+        "description": "Торговое помещение",
+        "unit_cadastral_id": null,
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-b",
+        "listing_id": "B903",
+        "url": "https://example.invalid/partner-b/B903",
+        "address": "Учебный город, Парковая 4",
+        "area_m2": 201,
+        "price_rub": 30000000,
+        "description": "ГАБ. Помещение свободно",
+        "unit_cadastral_id": null,
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-a",
+        "listing_id": "A103",
+        "url": "https://example.invalid/partner-a/A103",
+        "address": "Учебный город, Южная 3",
+        "area_m2": 66,
+        "price_rub": 9500000,
+        "description": "ГАБ с арендатором",
+        "unit_cadastral_id": null,
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-a",
+        "listing_id": "A104",
+        "url": "https://example.invalid/partner-a/A104",
+        "address": "Учебный город, Садовая 16",
+        "area_m2": 140,
+        "price_rub": 19500000,
+        "description": "Помещение свободно",
+        "unit_cadastral_id": null,
+        "status": "listed",
+        "educational": true
+      }
+    ]
+  },
+  {
+    "run_id": "2026-11-03",
+    "captured_at": "2026-11-03T08:00:00+03:00",
+    "sources": {
+      "partner-a": {
+        "status": "ok",
+        "complete": true,
+        "expected_min": 3
+      },
+      "partner-b": {
+        "status": "failed",
+        "complete": false,
+        "reason": "HTTP 503 — simulated"
+      }
+    },
+    "listings": [
+      {
+        "source": "partner-a",
+        "listing_id": "A101",
+        "url": "https://example.invalid/partner-a/A101",
+        "address": "Учебный город, Лесная 10, пом. 1",
+        "area_m2": 110,
+        "price_rub": 21000000,
+        "description": "ГАБ с арендатором — продукты",
+        "unit_cadastral_id": "DEMO-UNIT-01",
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-a",
+        "listing_id": "A103",
+        "url": "https://example.invalid/partner-a/A103",
+        "address": "Учебный город, Южная 3",
+        "area_m2": 66,
+        "price_rub": 9500000,
+        "description": "ГАБ с арендатором",
+        "unit_cadastral_id": null,
+        "status": "listed",
+        "educational": true
+      },
+      {
+        "source": "partner-a",
+        "listing_id": "A104",
+        "url": "https://example.invalid/partner-a/A104",
+        "address": "Учебный город, Садовая 16",
+        "area_m2": 140,
+        "price_rub": 19500000,
+        "description": "Помещение свободно",
+        "unit_cadastral_id": null,
+        "status": "listed",
+        "educational": true
+      }
+    ]
+  }
+]

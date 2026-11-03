@@ -1,0 +1,749 @@
+{
+  "reports": [
+    {
+      "run_id": "2026-11-01",
+      "captured_at": "2026-11-01T08:00:00+03:00",
+      "sources": {
+        "partner-a": {
+          "status": "ok",
+          "complete": true,
+          "expected_min": 3
+        },
+        "partner-b": {
+          "status": "ok",
+          "complete": true,
+          "expected_min": 3
+        }
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "run_id": "2026-11-01",
+          "object_id": "obj-8a94ea7e595d",
+          "kind": "new",
+          "detail": {
+            "source": "partner-a",
+            "listing_id": "A101"
+          }
+        },
+        {
+          "event_id": 2,
+          "run_id": "2026-11-01",
+          "object_id": "obj-8a94ea7e595d",
+          "kind": "duplicate_linked",
+          "detail": {
+            "source": "partner-b",
+            "listing_id": "B901"
+          }
+        },
+        {
+          "event_id": 3,
+          "run_id": "2026-11-01",
+          "object_id": "obj-4f21df96204f",
+          "kind": "new",
+          "detail": {
+            "source": "partner-a",
+            "listing_id": "A102"
+          }
+        },
+        {
+          "event_id": 4,
+          "run_id": "2026-11-01",
+          "object_id": "obj-fab132dfddaa",
+          "kind": "new",
+          "detail": {
+            "source": "partner-b",
+            "listing_id": "B902"
+          }
+        },
+        {
+          "event_id": 5,
+          "run_id": "2026-11-01",
+          "object_id": "obj-9f9c21549dfa",
+          "kind": "new",
+          "detail": {
+            "source": "partner-b",
+            "listing_id": "B903"
+          }
+        },
+        {
+          "event_id": 6,
+          "run_id": "2026-11-01",
+          "object_id": "obj-58d9f4e6c9cf",
+          "kind": "new",
+          "detail": {
+            "source": "partner-a",
+            "listing_id": "A103"
+          }
+        }
+      ],
+      "objects": [
+        {
+          "object_id": "obj-4f21df96204f",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A102",
+              "object_id": "obj-4f21df96204f",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-01T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A102",
+                "url": "https://example.invalid/partner-a/A102",
+                "address": "Учебный город, Полевая 8, пом. 2",
+                "area_m2": 82,
+                "price_rub": 12000000,
+                "description": "Без арендатора. Свободное помещение",
+                "unit_cadastral_id": "DEMO-UNIT-02",
+                "status": "listed",
+                "educational": true,
+                "classification": "vacant"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-58d9f4e6c9cf",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A103",
+              "object_id": "obj-58d9f4e6c9cf",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-01T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A103",
+                "url": "https://example.invalid/partner-a/A103",
+                "address": "Учебный город, Южная 3",
+                "area_m2": 66,
+                "price_rub": 9500000,
+                "description": "ГАБ с арендатором",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "gab"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-8a94ea7e595d",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A101",
+              "object_id": "obj-8a94ea7e595d",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-01T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A101",
+                "url": "https://example.invalid/partner-a/A101",
+                "address": "Учебный город, Лесная 10, пом. 1",
+                "area_m2": 110,
+                "price_rub": 22000000,
+                "description": "ГАБ с арендатором — продукты",
+                "unit_cadastral_id": "DEMO-UNIT-01",
+                "status": "listed",
+                "educational": true,
+                "classification": "gab"
+              }
+            },
+            {
+              "source": "partner-b",
+              "listing_id": "B901",
+              "object_id": "obj-8a94ea7e595d",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-01T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-b",
+                "listing_id": "B901",
+                "url": "https://example.invalid/partner-b/B901",
+                "address": "Учебный город, Лесная 10, пом. 1",
+                "area_m2": 110,
+                "price_rub": 22500000,
+                "description": "Действующий арендатор",
+                "unit_cadastral_id": "DEMO-UNIT-01",
+                "status": "listed",
+                "educational": true,
+                "classification": "gab"
+              }
+            }
+          ],
+          "conflicts": [
+            "different_current_prices"
+          ]
+        },
+        {
+          "object_id": "obj-9f9c21549dfa",
+          "listings": [
+            {
+              "source": "partner-b",
+              "listing_id": "B903",
+              "object_id": "obj-9f9c21549dfa",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-01T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-b",
+                "listing_id": "B903",
+                "url": "https://example.invalid/partner-b/B903",
+                "address": "Учебный город, Парковая 4",
+                "area_m2": 201,
+                "price_rub": 30000000,
+                "description": "ГАБ. Помещение свободно",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "conflict"
+              }
+            }
+          ],
+          "conflicts": [
+            "occupancy_conflict"
+          ]
+        },
+        {
+          "object_id": "obj-fab132dfddaa",
+          "listings": [
+            {
+              "source": "partner-b",
+              "listing_id": "B902",
+              "object_id": "obj-fab132dfddaa",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-01T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-b",
+                "listing_id": "B902",
+                "url": "https://example.invalid/partner-b/B902",
+                "address": "Учебный город, Парковая 4",
+                "area_m2": 200,
+                "price_rub": null,
+                "description": "Торговое помещение",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "unknown"
+              }
+            }
+          ],
+          "conflicts": []
+        }
+      ],
+      "merge_candidates": [
+        {
+          "a": "obj-9f9c21549dfa",
+          "b": "obj-fab132dfddaa",
+          "reason": "same address and close area; manual review"
+        }
+      ],
+      "educational": true
+    },
+    {
+      "run_id": "2026-11-02",
+      "captured_at": "2026-11-02T08:00:00+03:00",
+      "sources": {
+        "partner-a": {
+          "status": "ok",
+          "complete": true,
+          "expected_min": 3
+        },
+        "partner-b": {
+          "status": "ok",
+          "complete": true,
+          "expected_min": 3
+        }
+      },
+      "events": [
+        {
+          "event_id": 7,
+          "run_id": "2026-11-02",
+          "object_id": "obj-8a94ea7e595d",
+          "kind": "price_rub_changed",
+          "detail": {
+            "source": "partner-a",
+            "listing_id": "A101",
+            "before": 22000000,
+            "after": 21000000
+          }
+        },
+        {
+          "event_id": 8,
+          "run_id": "2026-11-02",
+          "object_id": "obj-8a94ea7e595d",
+          "kind": "status_changed",
+          "detail": {
+            "source": "partner-b",
+            "listing_id": "B901",
+            "before": "listed",
+            "after": "withdrawn_by_source"
+          }
+        },
+        {
+          "event_id": 9,
+          "run_id": "2026-11-02",
+          "object_id": "obj-4fa1421fa654",
+          "kind": "new",
+          "detail": {
+            "source": "partner-a",
+            "listing_id": "A104"
+          }
+        },
+        {
+          "event_id": 10,
+          "run_id": "2026-11-02",
+          "object_id": "obj-4f21df96204f",
+          "kind": "not_seen",
+          "detail": {
+            "source": "partner-a",
+            "listing_id": "A102",
+            "consecutive_complete_misses": 1,
+            "action": "recheck; not proof of sale"
+          }
+        }
+      ],
+      "objects": [
+        {
+          "object_id": "obj-4f21df96204f",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A102",
+              "object_id": "obj-4f21df96204f",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-01T08:00:00+03:00",
+              "missed": 1,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A102",
+                "url": "https://example.invalid/partner-a/A102",
+                "address": "Учебный город, Полевая 8, пом. 2",
+                "area_m2": 82,
+                "price_rub": 12000000,
+                "description": "Без арендатора. Свободное помещение",
+                "unit_cadastral_id": "DEMO-UNIT-02",
+                "status": "listed",
+                "educational": true,
+                "classification": "vacant"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-4fa1421fa654",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A104",
+              "object_id": "obj-4fa1421fa654",
+              "first_seen": "2026-11-02T08:00:00+03:00",
+              "last_seen": "2026-11-02T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A104",
+                "url": "https://example.invalid/partner-a/A104",
+                "address": "Учебный город, Садовая 16",
+                "area_m2": 140,
+                "price_rub": 19500000,
+                "description": "Помещение свободно",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "vacant"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-58d9f4e6c9cf",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A103",
+              "object_id": "obj-58d9f4e6c9cf",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-02T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A103",
+                "url": "https://example.invalid/partner-a/A103",
+                "address": "Учебный город, Южная 3",
+                "area_m2": 66,
+                "price_rub": 9500000,
+                "description": "ГАБ с арендатором",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "gab"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-8a94ea7e595d",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A101",
+              "object_id": "obj-8a94ea7e595d",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-02T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A101",
+                "url": "https://example.invalid/partner-a/A101",
+                "address": "Учебный город, Лесная 10, пом. 1",
+                "area_m2": 110,
+                "price_rub": 21000000,
+                "description": "ГАБ с арендатором — продукты",
+                "unit_cadastral_id": "DEMO-UNIT-01",
+                "status": "listed",
+                "educational": true,
+                "classification": "gab"
+              }
+            },
+            {
+              "source": "partner-b",
+              "listing_id": "B901",
+              "object_id": "obj-8a94ea7e595d",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-02T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-b",
+                "listing_id": "B901",
+                "url": "https://example.invalid/partner-b/B901",
+                "address": "Учебный город, Лесная 10, пом. 1",
+                "area_m2": 110,
+                "price_rub": 22500000,
+                "description": "Действующий арендатор",
+                "unit_cadastral_id": "DEMO-UNIT-01",
+                "status": "withdrawn_by_source",
+                "educational": true,
+                "classification": "gab"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-9f9c21549dfa",
+          "listings": [
+            {
+              "source": "partner-b",
+              "listing_id": "B903",
+              "object_id": "obj-9f9c21549dfa",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-02T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-b",
+                "listing_id": "B903",
+                "url": "https://example.invalid/partner-b/B903",
+                "address": "Учебный город, Парковая 4",
+                "area_m2": 201,
+                "price_rub": 30000000,
+                "description": "ГАБ. Помещение свободно",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "conflict"
+              }
+            }
+          ],
+          "conflicts": [
+            "occupancy_conflict"
+          ]
+        },
+        {
+          "object_id": "obj-fab132dfddaa",
+          "listings": [
+            {
+              "source": "partner-b",
+              "listing_id": "B902",
+              "object_id": "obj-fab132dfddaa",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-02T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-b",
+                "listing_id": "B902",
+                "url": "https://example.invalid/partner-b/B902",
+                "address": "Учебный город, Парковая 4",
+                "area_m2": 200,
+                "price_rub": null,
+                "description": "Торговое помещение",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "unknown"
+              }
+            }
+          ],
+          "conflicts": []
+        }
+      ],
+      "merge_candidates": [
+        {
+          "a": "obj-9f9c21549dfa",
+          "b": "obj-fab132dfddaa",
+          "reason": "same address and close area; manual review"
+        }
+      ],
+      "educational": true
+    },
+    {
+      "run_id": "2026-11-03",
+      "captured_at": "2026-11-03T08:00:00+03:00",
+      "sources": {
+        "partner-a": {
+          "status": "ok",
+          "complete": true,
+          "expected_min": 3
+        },
+        "partner-b": {
+          "status": "failed",
+          "complete": false,
+          "reason": "HTTP 503 — simulated"
+        }
+      },
+      "events": [
+        {
+          "event_id": 11,
+          "run_id": "2026-11-03",
+          "object_id": "obj-4f21df96204f",
+          "kind": "not_seen",
+          "detail": {
+            "source": "partner-a",
+            "listing_id": "A102",
+            "consecutive_complete_misses": 2,
+            "action": "recheck; not proof of sale"
+          }
+        },
+        {
+          "event_id": 12,
+          "run_id": "2026-11-03",
+          "object_id": null,
+          "kind": "source_failed",
+          "detail": {
+            "source": "partner-b",
+            "reason": "HTTP 503 — simulated"
+          }
+        }
+      ],
+      "objects": [
+        {
+          "object_id": "obj-4f21df96204f",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A102",
+              "object_id": "obj-4f21df96204f",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-01T08:00:00+03:00",
+              "missed": 2,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A102",
+                "url": "https://example.invalid/partner-a/A102",
+                "address": "Учебный город, Полевая 8, пом. 2",
+                "area_m2": 82,
+                "price_rub": 12000000,
+                "description": "Без арендатора. Свободное помещение",
+                "unit_cadastral_id": "DEMO-UNIT-02",
+                "status": "listed",
+                "educational": true,
+                "classification": "vacant"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-4fa1421fa654",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A104",
+              "object_id": "obj-4fa1421fa654",
+              "first_seen": "2026-11-02T08:00:00+03:00",
+              "last_seen": "2026-11-03T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A104",
+                "url": "https://example.invalid/partner-a/A104",
+                "address": "Учебный город, Садовая 16",
+                "area_m2": 140,
+                "price_rub": 19500000,
+                "description": "Помещение свободно",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "vacant"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-58d9f4e6c9cf",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A103",
+              "object_id": "obj-58d9f4e6c9cf",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-03T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A103",
+                "url": "https://example.invalid/partner-a/A103",
+                "address": "Учебный город, Южная 3",
+                "area_m2": 66,
+                "price_rub": 9500000,
+                "description": "ГАБ с арендатором",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "gab"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-8a94ea7e595d",
+          "listings": [
+            {
+              "source": "partner-a",
+              "listing_id": "A101",
+              "object_id": "obj-8a94ea7e595d",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-03T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-a",
+                "listing_id": "A101",
+                "url": "https://example.invalid/partner-a/A101",
+                "address": "Учебный город, Лесная 10, пом. 1",
+                "area_m2": 110,
+                "price_rub": 21000000,
+                "description": "ГАБ с арендатором — продукты",
+                "unit_cadastral_id": "DEMO-UNIT-01",
+                "status": "listed",
+                "educational": true,
+                "classification": "gab"
+              }
+            },
+            {
+              "source": "partner-b",
+              "listing_id": "B901",
+              "object_id": "obj-8a94ea7e595d",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-02T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-b",
+                "listing_id": "B901",
+                "url": "https://example.invalid/partner-b/B901",
+                "address": "Учебный город, Лесная 10, пом. 1",
+                "area_m2": 110,
+                "price_rub": 22500000,
+                "description": "Действующий арендатор",
+                "unit_cadastral_id": "DEMO-UNIT-01",
+                "status": "withdrawn_by_source",
+                "educational": true,
+                "classification": "gab"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-9f9c21549dfa",
+          "listings": [
+            {
+              "source": "partner-b",
+              "listing_id": "B903",
+              "object_id": "obj-9f9c21549dfa",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-02T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-b",
+                "listing_id": "B903",
+                "url": "https://example.invalid/partner-b/B903",
+                "address": "Учебный город, Парковая 4",
+                "area_m2": 201,
+                "price_rub": 30000000,
+                "description": "ГАБ. Помещение свободно",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "conflict"
+              }
+            }
+          ],
+          "conflicts": []
+        },
+        {
+          "object_id": "obj-fab132dfddaa",
+          "listings": [
+            {
+              "source": "partner-b",
+              "listing_id": "B902",
+              "object_id": "obj-fab132dfddaa",
+              "first_seen": "2026-11-01T08:00:00+03:00",
+              "last_seen": "2026-11-02T08:00:00+03:00",
+              "missed": 0,
+              "payload": {
+                "source": "partner-b",
+                "listing_id": "B902",
+                "url": "https://example.invalid/partner-b/B902",
+                "address": "Учебный город, Парковая 4",
+                "area_m2": 200,
+                "price_rub": null,
+                "description": "Торговое помещение",
+                "unit_cadastral_id": null,
+                "status": "listed",
+                "educational": true,
+                "classification": "unknown"
+              }
+            }
+          ],
+          "conflicts": []
+        }
+      ],
+      "merge_candidates": [
+        {
+          "a": "obj-9f9c21549dfa",
+          "b": "obj-fab132dfddaa",
+          "reason": "same address and close area; manual review"
+        }
+      ],
+      "educational": true
+    }
+  ],
+  "watchdog": {
+    "alert": true,
+    "last_completed_ingest": "2026-11-03T08:00:00+03:00",
+    "deadline": "2026-11-04T08:30:00+03:00"
+  }
+}

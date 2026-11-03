@@ -1,0 +1,32 @@
+[
+  {
+    "file": "01-front.png",
+    "sha256": "c1e60f7be4bc42d3e755714bd790462812271242f173f1b978cbcf21058a58af",
+    "origin": "user-supplied Avito listing images; original bytes preserved"
+  },
+  {
+    "file": "02-entrance.png",
+    "sha256": "657c4ccbbd3844d3fca31aceb4a9fa735a67b7971be9cc44db0e5467f1a2192e",
+    "origin": "user-supplied Avito listing images; original bytes preserved"
+  },
+  {
+    "file": "03-terrace.png",
+    "sha256": "7588a9ac8c83e421dfffd5e54f79eb731102b0a127aedae6bbedd95a48def072",
+    "origin": "user-supplied Avito listing images; original bytes preserved"
+  },
+  {
+    "file": "04-facade.png",
+    "sha256": "8d4aaf061adda129138ef2bb2fd0d63bb45c6946cd16f08beffb6d7c73ed221d",
+    "origin": "user-supplied Avito listing images; original bytes preserved"
+  },
+  {
+    "file": "05-context.png",
+    "sha256": "0d53171cad77494477c8fafc6ee3b2fa3e678a7497d039c4fba6795a0b80b69b",
+    "origin": "user-supplied Avito listing images; original bytes preserved"
+  },
+  {
+    "file": "06-rear.png",
+    "sha256": "73ee8d18c983179e5447fc2913f36100e1829d7a261cebad5e29b721f1ffd893",
+    "origin": "user-supplied Avito listing images; original bytes preserved"
+  }
+]

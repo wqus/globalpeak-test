@@ -1,0 +1,2016 @@
+{
+  "success": {
+    "scenario": "success",
+    "educational": true,
+    "adapter": "fake; no Avito calls",
+    "frames": [
+      {
+        "step": "enqueue",
+        "created": true,
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "queued",
+          "attempts": 0,
+          "next_retry_at": null,
+          "external_id": null,
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "repeat_enqueue",
+        "created": false,
+        "same_job": true
+      },
+      {
+        "step": "send",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "submitted",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "moderation_report",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "published",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "gp_os_result",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "published",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "synced",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            },
+            {
+              "event": "gp_os_synced",
+              "detail": {
+                "version": 8
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "final": {
+      "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "channel": "avito",
+      "account": "demo-account",
+      "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+      "source_version": 7,
+      "status": "published",
+      "attempts": 1,
+      "next_retry_at": null,
+      "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "error": null,
+      "sync_status": "synced",
+      "events": [
+        {
+          "event": "queued",
+          "detail": {
+            "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+            "source_version": 7,
+            "operation": "create"
+          }
+        },
+        {
+          "event": "submitted",
+          "detail": {
+            "adapter": "fake",
+            "published": false
+          }
+        },
+        {
+          "event": "published",
+          "detail": {
+            "source": "fake moderation report",
+            "url_is_fake": true
+          }
+        },
+        {
+          "event": "gp_os_synced",
+          "detail": {
+            "version": 8
+          }
+        }
+      ]
+    },
+    "property": {
+      "id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "version": 8,
+      "educational": true,
+      "facts": {
+        "address": {
+          "value": "Учебный город, Тестовая улица, 12, помещение 2",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "area_m2": {
+          "value": 118,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "price_rub": {
+          "value": 24000000,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "category": {
+          "value": "commercial",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "deal_type": {
+          "value": "sale",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        }
+      },
+      "description": "Учебное торговое помещение. Все сведения и стоимость вымышлены. Не публиковать.",
+      "images": [
+        {
+          "asset_id": "demo-front-01",
+          "rights_confirmed": true,
+          "mime": "image/jpeg",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "advertising": {
+        "avito": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "status": "published",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7
+        }
+      },
+      "approval": {
+        "approved": true,
+        "by": "demo-reviewer",
+        "for_content_hash": "b19a1ea023515231969243cd07505469886d959e5b3f7926f4633b6966abde5b"
+      }
+    },
+    "remote_objects": 1
+  },
+  "validation": {
+    "scenario": "validation",
+    "educational": true,
+    "adapter": "fake; no Avito calls",
+    "frames": [],
+    "error": {
+      "code": "VALIDATION_FAILED",
+      "message": "Карточка не готова к публикации. Исправьте поля и подтвердите новую версию.",
+      "fields": [
+        "approval",
+        "facts.address",
+        "facts.price_rub"
+      ]
+    },
+    "http_status": 422,
+    "remote_objects": 0
+  },
+  "retry": {
+    "scenario": "retry",
+    "educational": true,
+    "adapter": "fake; no Avito calls",
+    "frames": [
+      {
+        "step": "enqueue",
+        "created": true,
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "queued",
+          "attempts": 0,
+          "next_retry_at": null,
+          "external_id": null,
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "repeat_enqueue",
+        "created": false,
+        "same_job": true
+      },
+      {
+        "step": "send",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "retry_wait",
+          "attempts": 1,
+          "next_retry_at": 1031.9422138121927,
+          "external_id": null,
+          "url": null,
+          "error": {
+            "code": "REMOTE_UNAVAILABLE",
+            "message": "Временная ошибка тестового адаптера",
+            "retryable": true
+          },
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "retry_wait",
+              "detail": {
+                "attempt": 1,
+                "delay_seconds": 31.94,
+                "error": {
+                  "code": "REMOTE_UNAVAILABLE",
+                  "message": "Временная ошибка тестового адаптера",
+                  "retryable": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "retry_or_reconcile",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "submitted",
+          "attempts": 2,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "retry_wait",
+              "detail": {
+                "attempt": 1,
+                "delay_seconds": 31.94,
+                "error": {
+                  "code": "REMOTE_UNAVAILABLE",
+                  "message": "Временная ошибка тестового адаптера",
+                  "retryable": true
+                }
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "moderation_report",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "published",
+          "attempts": 2,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "retry_wait",
+              "detail": {
+                "attempt": 1,
+                "delay_seconds": 31.94,
+                "error": {
+                  "code": "REMOTE_UNAVAILABLE",
+                  "message": "Временная ошибка тестового адаптера",
+                  "retryable": true
+                }
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "gp_os_result",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "published",
+          "attempts": 2,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "synced",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "retry_wait",
+              "detail": {
+                "attempt": 1,
+                "delay_seconds": 31.94,
+                "error": {
+                  "code": "REMOTE_UNAVAILABLE",
+                  "message": "Временная ошибка тестового адаптера",
+                  "retryable": true
+                }
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            },
+            {
+              "event": "gp_os_synced",
+              "detail": {
+                "version": 8
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "final": {
+      "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "channel": "avito",
+      "account": "demo-account",
+      "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+      "source_version": 7,
+      "status": "published",
+      "attempts": 2,
+      "next_retry_at": null,
+      "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "error": null,
+      "sync_status": "synced",
+      "events": [
+        {
+          "event": "queued",
+          "detail": {
+            "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+            "source_version": 7,
+            "operation": "create"
+          }
+        },
+        {
+          "event": "retry_wait",
+          "detail": {
+            "attempt": 1,
+            "delay_seconds": 31.94,
+            "error": {
+              "code": "REMOTE_UNAVAILABLE",
+              "message": "Временная ошибка тестового адаптера",
+              "retryable": true
+            }
+          }
+        },
+        {
+          "event": "submitted",
+          "detail": {
+            "adapter": "fake",
+            "published": false
+          }
+        },
+        {
+          "event": "published",
+          "detail": {
+            "source": "fake moderation report",
+            "url_is_fake": true
+          }
+        },
+        {
+          "event": "gp_os_synced",
+          "detail": {
+            "version": 8
+          }
+        }
+      ]
+    },
+    "property": {
+      "id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "version": 8,
+      "educational": true,
+      "facts": {
+        "address": {
+          "value": "Учебный город, Тестовая улица, 12, помещение 2",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "area_m2": {
+          "value": 118,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "price_rub": {
+          "value": 24000000,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "category": {
+          "value": "commercial",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "deal_type": {
+          "value": "sale",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        }
+      },
+      "description": "Учебное торговое помещение. Все сведения и стоимость вымышлены. Не публиковать.",
+      "images": [
+        {
+          "asset_id": "demo-front-01",
+          "rights_confirmed": true,
+          "mime": "image/jpeg",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "advertising": {
+        "avito": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "status": "published",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7
+        }
+      },
+      "approval": {
+        "approved": true,
+        "by": "demo-reviewer",
+        "for_content_hash": "b19a1ea023515231969243cd07505469886d959e5b3f7926f4633b6966abde5b"
+      }
+    },
+    "remote_objects": 1
+  },
+  "timeout": {
+    "scenario": "timeout",
+    "educational": true,
+    "adapter": "fake; no Avito calls",
+    "frames": [
+      {
+        "step": "enqueue",
+        "created": true,
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "queued",
+          "attempts": 0,
+          "next_retry_at": null,
+          "external_id": null,
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "repeat_enqueue",
+        "created": false,
+        "same_job": true
+      },
+      {
+        "step": "send",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "reconciling",
+          "attempts": 1,
+          "next_retry_at": 1031.9422138121927,
+          "external_id": null,
+          "url": null,
+          "error": {
+            "code": "UNKNOWN_OUTCOME",
+            "message": "Нужна сверка по постоянному Id",
+            "retryable": true
+          },
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "reconciling",
+              "detail": {
+                "attempt": 1,
+                "delay_seconds": 31.94,
+                "error": {
+                  "code": "UNKNOWN_OUTCOME",
+                  "message": "Нужна сверка по постоянному Id",
+                  "retryable": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "retry_or_reconcile",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "submitted",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "reconciling",
+              "detail": {
+                "attempt": 1,
+                "delay_seconds": 31.94,
+                "error": {
+                  "code": "UNKNOWN_OUTCOME",
+                  "message": "Нужна сверка по постоянному Id",
+                  "retryable": true
+                }
+              }
+            },
+            {
+              "event": "reconciled",
+              "detail": {
+                "remote_objects": 1,
+                "no_resend": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "moderation_report",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "published",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "reconciling",
+              "detail": {
+                "attempt": 1,
+                "delay_seconds": 31.94,
+                "error": {
+                  "code": "UNKNOWN_OUTCOME",
+                  "message": "Нужна сверка по постоянному Id",
+                  "retryable": true
+                }
+              }
+            },
+            {
+              "event": "reconciled",
+              "detail": {
+                "remote_objects": 1,
+                "no_resend": true
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "gp_os_result",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "published",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "synced",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "reconciling",
+              "detail": {
+                "attempt": 1,
+                "delay_seconds": 31.94,
+                "error": {
+                  "code": "UNKNOWN_OUTCOME",
+                  "message": "Нужна сверка по постоянному Id",
+                  "retryable": true
+                }
+              }
+            },
+            {
+              "event": "reconciled",
+              "detail": {
+                "remote_objects": 1,
+                "no_resend": true
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            },
+            {
+              "event": "gp_os_synced",
+              "detail": {
+                "version": 8
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "final": {
+      "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "channel": "avito",
+      "account": "demo-account",
+      "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+      "source_version": 7,
+      "status": "published",
+      "attempts": 1,
+      "next_retry_at": null,
+      "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "error": null,
+      "sync_status": "synced",
+      "events": [
+        {
+          "event": "queued",
+          "detail": {
+            "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+            "source_version": 7,
+            "operation": "create"
+          }
+        },
+        {
+          "event": "reconciling",
+          "detail": {
+            "attempt": 1,
+            "delay_seconds": 31.94,
+            "error": {
+              "code": "UNKNOWN_OUTCOME",
+              "message": "Нужна сверка по постоянному Id",
+              "retryable": true
+            }
+          }
+        },
+        {
+          "event": "reconciled",
+          "detail": {
+            "remote_objects": 1,
+            "no_resend": true
+          }
+        },
+        {
+          "event": "published",
+          "detail": {
+            "source": "fake moderation report",
+            "url_is_fake": true
+          }
+        },
+        {
+          "event": "gp_os_synced",
+          "detail": {
+            "version": 8
+          }
+        }
+      ]
+    },
+    "property": {
+      "id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "version": 8,
+      "educational": true,
+      "facts": {
+        "address": {
+          "value": "Учебный город, Тестовая улица, 12, помещение 2",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "area_m2": {
+          "value": 118,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "price_rub": {
+          "value": 24000000,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "category": {
+          "value": "commercial",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "deal_type": {
+          "value": "sale",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        }
+      },
+      "description": "Учебное торговое помещение. Все сведения и стоимость вымышлены. Не публиковать.",
+      "images": [
+        {
+          "asset_id": "demo-front-01",
+          "rights_confirmed": true,
+          "mime": "image/jpeg",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "advertising": {
+        "avito": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "status": "published",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7
+        }
+      },
+      "approval": {
+        "approved": true,
+        "by": "demo-reviewer",
+        "for_content_hash": "b19a1ea023515231969243cd07505469886d959e5b3f7926f4633b6966abde5b"
+      }
+    },
+    "remote_objects": 1
+  },
+  "conflict": {
+    "scenario": "conflict",
+    "educational": true,
+    "adapter": "fake; no Avito calls",
+    "frames": [
+      {
+        "step": "stale_enqueue",
+        "http_status": 409,
+        "error": {
+          "code": "VERSION_CONFLICT",
+          "message": "Ожидаемая версия устарела",
+          "fields": []
+        }
+      },
+      {
+        "step": "enqueue",
+        "created": true,
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 8,
+          "status": "queued",
+          "attempts": 0,
+          "next_retry_at": null,
+          "external_id": null,
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 8,
+                "operation": "create"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "repeat_enqueue",
+        "created": false,
+        "same_job": true
+      },
+      {
+        "step": "send",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 8,
+          "status": "submitted",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 8,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "moderation_report",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 8,
+          "status": "published",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 8,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "sync_409",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 8,
+          "status": "published",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "conflict",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 8,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            },
+            {
+              "event": "gp_os_sync_conflict",
+              "detail": {
+                "action": "GET latest; merge advertising only; retry PATCH"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "gp_os_result",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 8,
+          "status": "published",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "synced",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 8,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            },
+            {
+              "event": "gp_os_sync_conflict",
+              "detail": {
+                "action": "GET latest; merge advertising only; retry PATCH"
+              }
+            },
+            {
+              "event": "gp_os_synced",
+              "detail": {
+                "version": 9
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "final": {
+      "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "channel": "avito",
+      "account": "demo-account",
+      "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+      "source_version": 8,
+      "status": "published",
+      "attempts": 1,
+      "next_retry_at": null,
+      "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "error": null,
+      "sync_status": "synced",
+      "events": [
+        {
+          "event": "queued",
+          "detail": {
+            "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+            "source_version": 8,
+            "operation": "create"
+          }
+        },
+        {
+          "event": "submitted",
+          "detail": {
+            "adapter": "fake",
+            "published": false
+          }
+        },
+        {
+          "event": "published",
+          "detail": {
+            "source": "fake moderation report",
+            "url_is_fake": true
+          }
+        },
+        {
+          "event": "gp_os_sync_conflict",
+          "detail": {
+            "action": "GET latest; merge advertising only; retry PATCH"
+          }
+        },
+        {
+          "event": "gp_os_synced",
+          "detail": {
+            "version": 9
+          }
+        }
+      ]
+    },
+    "property": {
+      "id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "version": 9,
+      "educational": true,
+      "facts": {
+        "address": {
+          "value": "Учебный город, Тестовая улица, 12, помещение 2",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "area_m2": {
+          "value": 118,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "price_rub": {
+          "value": 24000000,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "category": {
+          "value": "commercial",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "deal_type": {
+          "value": "sale",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        }
+      },
+      "description": "Учебное торговое помещение. Все сведения и стоимость вымышлены. Не публиковать.",
+      "images": [
+        {
+          "asset_id": "demo-front-01",
+          "rights_confirmed": true,
+          "mime": "image/jpeg",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "advertising": {
+        "note": "Учебное параллельное изменение",
+        "avito": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "status": "published",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 8
+        }
+      },
+      "approval": {
+        "approved": true,
+        "by": "demo-reviewer",
+        "for_content_hash": "b19a1ea023515231969243cd07505469886d959e5b3f7926f4633b6966abde5b"
+      }
+    },
+    "remote_objects": 1
+  },
+  "update": {
+    "scenario": "update",
+    "educational": true,
+    "adapter": "fake; no Avito calls",
+    "frames": [
+      {
+        "step": "enqueue",
+        "created": true,
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "queued",
+          "attempts": 0,
+          "next_retry_at": null,
+          "external_id": null,
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "repeat_enqueue",
+        "created": false,
+        "same_job": true
+      },
+      {
+        "step": "send",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "submitted",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "moderation_report",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "published",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "gp_os_result",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "published",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "synced",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            },
+            {
+              "event": "gp_os_synced",
+              "detail": {
+                "version": 8
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "update_same_external_id",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "0490f0aef6d422d5e8ab3fc64a4cf9963c1541e3057648f64174106ca5cd4311",
+          "source_version": 9,
+          "status": "published",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "sync_status": "synced",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            },
+            {
+              "event": "gp_os_synced",
+              "detail": {
+                "version": 8
+              }
+            },
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "0490f0aef6d422d5e8ab3fc64a4cf9963c1541e3057648f64174106ca5cd4311",
+                "source_version": 9,
+                "operation": "update"
+              }
+            },
+            {
+              "event": "submitted",
+              "detail": {
+                "adapter": "fake",
+                "published": false
+              }
+            },
+            {
+              "event": "published",
+              "detail": {
+                "source": "fake moderation report",
+                "url_is_fake": true
+              }
+            },
+            {
+              "event": "gp_os_synced",
+              "detail": {
+                "version": 10
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "final": {
+      "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "channel": "avito",
+      "account": "demo-account",
+      "content_hash": "0490f0aef6d422d5e8ab3fc64a4cf9963c1541e3057648f64174106ca5cd4311",
+      "source_version": 9,
+      "status": "published",
+      "attempts": 1,
+      "next_retry_at": null,
+      "external_id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "error": null,
+      "sync_status": "synced",
+      "events": [
+        {
+          "event": "queued",
+          "detail": {
+            "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+            "source_version": 7,
+            "operation": "create"
+          }
+        },
+        {
+          "event": "submitted",
+          "detail": {
+            "adapter": "fake",
+            "published": false
+          }
+        },
+        {
+          "event": "published",
+          "detail": {
+            "source": "fake moderation report",
+            "url_is_fake": true
+          }
+        },
+        {
+          "event": "gp_os_synced",
+          "detail": {
+            "version": 8
+          }
+        },
+        {
+          "event": "queued",
+          "detail": {
+            "content_hash": "0490f0aef6d422d5e8ab3fc64a4cf9963c1541e3057648f64174106ca5cd4311",
+            "source_version": 9,
+            "operation": "update"
+          }
+        },
+        {
+          "event": "submitted",
+          "detail": {
+            "adapter": "fake",
+            "published": false
+          }
+        },
+        {
+          "event": "published",
+          "detail": {
+            "source": "fake moderation report",
+            "url_is_fake": true
+          }
+        },
+        {
+          "event": "gp_os_synced",
+          "detail": {
+            "version": 10
+          }
+        }
+      ]
+    },
+    "property": {
+      "id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "version": 10,
+      "educational": true,
+      "facts": {
+        "address": {
+          "value": "Учебный город, Тестовая улица, 12, помещение 2",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "area_m2": {
+          "value": 118,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "price_rub": {
+          "value": 23500000,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "category": {
+          "value": "commercial",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "deal_type": {
+          "value": "sale",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        }
+      },
+      "description": "Учебное торговое помещение. Все сведения и стоимость вымышлены. Не публиковать.",
+      "images": [
+        {
+          "asset_id": "demo-front-01",
+          "rights_confirmed": true,
+          "mime": "image/jpeg",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "advertising": {
+        "avito": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "status": "published",
+          "url": "https://example.invalid/avito-demo/gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "error": null,
+          "content_hash": "0490f0aef6d422d5e8ab3fc64a4cf9963c1541e3057648f64174106ca5cd4311",
+          "source_version": 9
+        }
+      },
+      "approval": {
+        "approved": true,
+        "by": "demo-reviewer",
+        "for_content_hash": "627ed49bd3490eebb112aecbb767b63c18a6d02cf6887bc4ca6fed60d0717284"
+      }
+    },
+    "remote_objects": 1
+  },
+  "rejected": {
+    "scenario": "rejected",
+    "educational": true,
+    "adapter": "fake; no Avito calls",
+    "frames": [
+      {
+        "step": "enqueue",
+        "created": true,
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "queued",
+          "attempts": 0,
+          "next_retry_at": null,
+          "external_id": null,
+          "url": null,
+          "error": null,
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "repeat_enqueue",
+        "created": false,
+        "same_job": true
+      },
+      {
+        "step": "send",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "rejected",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": null,
+          "url": null,
+          "error": {
+            "code": "CATEGORY_REJECTED",
+            "message": "Учебный отказ категории: проверьте mapping",
+            "retryable": false
+          },
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "rejected",
+              "detail": {
+                "retryable": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "moderation_report",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "rejected",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": null,
+          "url": null,
+          "error": {
+            "code": "CATEGORY_REJECTED",
+            "message": "Учебный отказ категории: проверьте mapping",
+            "retryable": false
+          },
+          "sync_status": "pending",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "rejected",
+              "detail": {
+                "retryable": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": "gp_os_result",
+        "job": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "channel": "avito",
+          "account": "demo-account",
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7,
+          "status": "rejected",
+          "attempts": 1,
+          "next_retry_at": null,
+          "external_id": null,
+          "url": null,
+          "error": {
+            "code": "CATEGORY_REJECTED",
+            "message": "Учебный отказ категории: проверьте mapping",
+            "retryable": false
+          },
+          "sync_status": "synced",
+          "events": [
+            {
+              "event": "queued",
+              "detail": {
+                "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+                "source_version": 7,
+                "operation": "create"
+              }
+            },
+            {
+              "event": "rejected",
+              "detail": {
+                "retryable": false
+              }
+            },
+            {
+              "event": "gp_os_synced",
+              "detail": {
+                "version": 8
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "final": {
+      "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "property_id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "channel": "avito",
+      "account": "demo-account",
+      "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+      "source_version": 7,
+      "status": "rejected",
+      "attempts": 1,
+      "next_retry_at": null,
+      "external_id": null,
+      "url": null,
+      "error": {
+        "code": "CATEGORY_REJECTED",
+        "message": "Учебный отказ категории: проверьте mapping",
+        "retryable": false
+      },
+      "sync_status": "synced",
+      "events": [
+        {
+          "event": "queued",
+          "detail": {
+            "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+            "source_version": 7,
+            "operation": "create"
+          }
+        },
+        {
+          "event": "rejected",
+          "detail": {
+            "retryable": false
+          }
+        },
+        {
+          "event": "gp_os_synced",
+          "detail": {
+            "version": 8
+          }
+        }
+      ]
+    },
+    "property": {
+      "id": "c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+      "version": 8,
+      "educational": true,
+      "facts": {
+        "address": {
+          "value": "Учебный город, Тестовая улица, 12, помещение 2",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "area_m2": {
+          "value": 118,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "price_rub": {
+          "value": 24000000,
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "category": {
+          "value": "commercial",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        },
+        "deal_type": {
+          "value": "sale",
+          "verification": "confirmed",
+          "conflict": false,
+          "source": "educational-fixture"
+        }
+      },
+      "description": "Учебное торговое помещение. Все сведения и стоимость вымышлены. Не публиковать.",
+      "images": [
+        {
+          "asset_id": "demo-front-01",
+          "rights_confirmed": true,
+          "mime": "image/jpeg",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "advertising": {
+        "avito": {
+          "id": "gp-c4b69f48-2ab2-43ed-9d90-976ba62bf001",
+          "status": "rejected",
+          "url": null,
+          "error": {
+            "code": "CATEGORY_REJECTED",
+            "message": "Учебный отказ категории: проверьте mapping",
+            "retryable": false
+          },
+          "content_hash": "f6a90c235340bbe7ce84bd55f74b41c5852790718a4ed5ac2ccb0f8ab560eb2c",
+          "source_version": 7
+        }
+      },
+      "approval": {
+        "approved": true,
+        "by": "demo-reviewer",
+        "for_content_hash": "b19a1ea023515231969243cd07505469886d959e5b3f7926f4633b6966abde5b"
+      }
+    },
+    "remote_objects": 0
+  }
+}

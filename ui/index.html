@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Тестовое задание Абрамяна Бена для GlobalPeak: мониторинг недвижимости, рекламный материал и модуль публикации.">
+  <title>Тестовое задание — Абрамян Бен / GlobalPeak</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержанию</a>
+  <header class="header">
+    <a class="brand" href="#overview">GlobalPeak <span>/ Тестовое задание</span></a>
+    <span class="header-author">Абрамян Бен <span>03 ноября 2026</span></span>
+  </header>
+  <div class="report-layout">
+    <aside class="sidebar">
+      <nav aria-label="Содержание отчёта">
+        <p class="nav-label">Содержание</p>
+        <a href="#overview">Обзор работы</a>
+        <a href="#monitor"><span>01</span> Мониторинг</a>
+        <a href="#creative"><span>02</span> Рекламный материал</a>
+        <a href="#publish"><span>03</span> Автопубликация</a>
+        <a href="#delivery">План и стоимость</a>
+        <a href="#materials">Файлы и проверка</a>
+      </nav>
+      <div class="sidebar-info">
+        <strong>Локальная версия</strong>
+        <p>Учебные данные и тестовый адаптер. Объявления на Авито не публиковались.</p>
+        <a href="notes/README.html">Инструкция запуска</a>
+      </div>
+    </aside>
+    <main id="main" class="report">
+      <section id="overview" class="report-intro">
+        <p class="page-caption">Решения для брокерского агентства</p>
+        <h1>Мониторинг и публикация объектов</h1>
+        <p class="intro-text">Результаты трёх заданий: ежедневный отчёт брокеру, рекламный материал объекта и сценарий обмена между GP OS и Авито.</p>
+        <div class="table-scroll">
+          <table class="overview-table">
+            <thead><tr><th>Задание</th><th>Что подготовлено</th><th>Проверка</th></tr></thead>
+            <tbody>
+              <tr><td><a href="#monitor">Мониторинг</a></td><td>История наблюдений, изменения цены, дубли, CSV</td><td>Три учебных снимка</td></tr>
+              <tr><td><a href="#creative">Рекламный материал</a></td><td>Макет на фотографии здания, 1080×1350</td><td>Сверка с исходником</td></tr>
+              <tr><td><a href="#publish">Автопубликация</a></td><td>Очередь, валидация, повторы и возврат статуса</td><td>Семь сценариев</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="scope-note">Мониторинг и публикация работают на вымышленных объектах. Для рекламы использованы переданные фото и текст объявления. Доступа к рабочим системам GP OS и Авито нет.</p>
+      </section>
+
+      <section id="monitor" class="task-section">
+        <div class="section-heading">
+          <p class="section-index">Задание 01</p>
+          <h2>Мониторинг торговой недвижимости</h2>
+          <p>Ежедневный отчёт показывает новые предложения, изменения условий и объекты, которые нужно проверить. Сбой источника виден в самом отчёте.</p>
+          <a href="notes/01-monitoring.html">Полное решение, источники и план внедрения</a>
+        </div>
+        <p class="demo-label">Демонстрация на учебных данных <span>Python · SQLite · три ежедневных снимка</span></p>
+        <div class="monitor-shell">
+          <div class="monitor-top">
+            <div><span class="eyebrow">Отчёт брокеру</span><h3 id="report-title">03 ноября / 08:00 МСК</h3></div>
+            <label>Дата наблюдения<select id="report-day" aria-label="Дата наблюдения"><option value="2">03 ноября 2026</option><option value="1">02 ноября 2026</option><option value="0">01 ноября 2026</option></select></label>
+            <a class="button subtle" href="data/daily-report.csv" download>Скачать CSV</a>
+          </div>
+          <div id="source-health" class="source-health" aria-live="polite"></div>
+          <div class="monitor-stats" id="monitor-stats"></div>
+          <div class="table-tools">
+            <label class="search"><input id="object-search" type="search" placeholder="Адрес или ID объявления" aria-label="Поиск по адресу или ID"></label>
+            <label class="filter-label">Занятость<select id="class-filter"><option value="all">Все объекты</option><option value="gab">ГАБ</option><option value="vacant">Свободные</option><option value="conflict">Противоречия</option><option value="unknown">Не определён</option></select></label>
+          </div>
+          <div class="table-scroll">
+            <table class="inventory"><thead><tr><th>Объект / адрес</th><th>Площадь</th><th>Цена источника</th><th>Занятость</th><th>Проверка</th><th><span class="visually-hidden">Источники</span></th></tr></thead><tbody id="object-rows"></tbody></table>
+          </div>
+          <div class="report-bottom"><span>Цены учебные. Дата наблюдения не подтверждает актуальность сделки.</span><span id="visible-count"></span></div>
+          <div class="detail-panel" id="object-detail" hidden></div>
+          <div class="event-section"><h4>События за день</h4><div id="monitor-events"></div></div>
+        </div>
+        <div class="section-explanation">
+          <h3>Область пилота</h3><p>Москва и Московская область, продажа торговых помещений и зданий. Сначала — два согласованных партнёрских фида. Авито и Циан требуют подтверждения разрешённого доступа к данным. API публикации своих объявлений не даёт доступа ко всему рынку.</p>
+          <h3>Обработка данных</h3><p>Точный идентификатор помещения связывает дубли; адрес и близкая площадь дают только кандидата на проверку. Исчезновение при успешном обходе означает «не наблюдается». При сбое источника прежние сведения сохраняются с датой.</p>
+          <h3>Проверка качества</h3><p>Раз в неделю брокер собирает 50–100 примеров в тех же границах. Сравниваем полноту, точность классификации и ошибки объединения. Процент охвата всего рынка без контрольной базы не заявляется.</p>
+        </div>
+        <details class="read-more">
+          <summary>Карточка объекта, запуск и обнаружение сбоев</summary>
+          <div class="details-content">
+            <div><h4>Карточка и история</h4><p>UUID объекта, source/listing_id, адрес, площадь, назначение, цена и валюта, занятость, арендатор, ссылка, статус и время наблюдения. Достоверность и конфликты сохраняются отдельно для каждого факта. Неизвестное хранится как null.</p><p>В прототипе — SQLite и неизменяемые снимки. В production — PostgreSQL, разрешённое хранение исходных ответов и резервное копирование.</p></div>
+            <div><h4>Проектное расписание</h4><p>Сбор в 07:45, отчёт в 08:15, независимая проверка завершения в 08:30 МСК. Контролируются время, объём, ошибки разбора и обязательные поля по каждому источнику.</p><p>Функция watchdog и контроль объёма реализованы. Планировщик, доставка уведомлений и резервирование пока спроектированы. Договор аренды и фактическую цену сделки мониторинг не подтверждает.</p></div>
+          </div>
+        </details>
+      </section>
+
+      <section id="creative" class="task-section">
+        <div class="section-heading">
+          <p class="section-index">Задание 02</p><h2>Рекламный материал объекта</h2>
+          <p>Здание с заявленным арендатором «Вкусно — и точка», 416 м², М-2 «Крым». Основание — фото и описание объявления №8145299815.</p>
+          <a href="notes/02-creative.html">Идея, процесс подготовки и проверка фактов</a>
+        </div>
+        <div class="creative-grid">
+          <a class="poster-preview" href="creative.html" aria-label="Открыть рекламный макет целиком"><img src="assets/poster.svg" alt="Рекламный макет: здание с арендатором Вкусно — и точка, 416 м² на М-2 Крым" width="1080" height="1350" loading="lazy"></a>
+          <div class="creative-story">
+            <h3>Макет для первого обращения покупателя</h3>
+            <p>В центре — общий вид здания, его площадь и заявленный арендатор. Следующее действие — запросить документы и условия продажи.</p>
+            <dl class="spec-list">
+              <div><dt>Формат</dt><dd>1080×1350, самодостаточный SVG. Для презентации покупателю и социальной ленты.</dd></div>
+              <div><dt>Исходники</dt><dd>Шесть фотографий и текст объявления, переданные пользователем.</dd></div>
+              <div><dt>Обработка</dt><dd>Полный кадр без обрезки. Фасад, небо, автомобили и окружение сохранены.</dd></div>
+              <div><dt>Публикация</dt><dd>Материал не размещён. Нужны подтверждение фактов, права на фото и контакт для обращения.</dd></div>
+            </dl>
+            <div class="actions"><a class="button dark" href="creative.html">Открыть макет</a><a href="assets/poster.svg" download>Скачать SVG</a></div>
+          </div>
+        </div>
+        <div class="section-explanation">
+          <h3>Что использовано</h3><p>Площадь, название арендатора и трасса — по данным объявления, с оговоркой о проверке документов. Оригинальные фото сохранены побайтно; <a href="data/asset-manifest.json">контрольные суммы исходников</a> доступны отдельно.</p>
+          <h3>Что исключено</h3><p>Цена, аренда и доходность. Указанные в тексте 5% от РТО не являются 5% годовой доходности и не подтверждены договором. Видимые парковочные места не доказывают права продавца на парковку.</p>
+          <h3>Что уточнить</h3><p>В карточке — Симферопольское шоссе, 25-й км, с4; в описании — Боброво, д. 4. Нужны кадастровые документы, предмет продажи, договор аренды, подтверждение площади и оригиналы фото без водяных знаков.</p>
+        </div>
+        <details class="read-more">
+          <summary>Другие фотографии объекта</summary>
+          <div class="photo-gallery">
+            <a href="assets/02-entrance.png"><img src="assets/02-entrance.png" alt="Вход и остекление здания" loading="lazy"></a>
+            <a href="assets/04-facade.png"><img src="assets/04-facade.png" alt="Фронтальный вид здания" loading="lazy"></a>
+            <a href="assets/05-context.png"><img src="assets/05-context.png" alt="Боковой фасад и соседнее здание" loading="lazy"></a>
+            <a href="assets/06-rear.png"><img src="assets/06-rear.png" alt="Задний фасад и жилая застройка" loading="lazy"></a>
+          </div>
+        </details>
+      </section>
+
+      <section id="publish" class="task-section">
+        <div class="section-heading">
+          <p class="section-index">Задание 03</p><h2>Модуль автопубликации</h2>
+          <p>Карточка GP OS проходит проверку и попадает в очередь. Тестовый адаптер возвращает результат, который записывается обратно в карточку.</p>
+          <a href="notes/03-publication.html">Контракт обмена, состояния и ограничения интеграции</a>
+        </div>
+        <p class="demo-label">Тестовый адаптер <span>Объект и цена вымышлены. Реальных отправок нет.</span></p>
+        <div class="publication-shell">
+          <div class="publication-toolbar">
+            <label>Сценарий<select id="scenario-select"><option value="success">Успешная обработка</option><option value="validation">Неподтверждённые поля</option><option value="retry">Временный сбой и повтор</option><option value="timeout">Таймаут после принятия</option><option value="conflict">Конфликт версии 409</option><option value="update">Обновление без дубля</option><option value="rejected">Постоянный отказ</option></select></label>
+            <button class="button dark" id="run-scenario">Выполнить сценарий</button><span id="execution-mode" role="status">Загружаем сохранённый результат…</span>
+          </div>
+          <div class="publication-grid">
+            <div class="input-card">
+              <span class="eyebrow">Исходная карточка</span><h3>Торговое помещение</h3><p>Учебный город, Тестовая ул., 12, пом. 2</p>
+              <div class="input-facts"><div><small>Площадь</small><strong>118 м²</strong></div><div><small>Цена · вымышленная</small><strong>24 млн ₽</strong></div></div>
+              <dl class="compact-dl"><div><dt>UUID</dt><dd>c4b69f48-…-976ba62bf001</dd></div><div><dt>Версия</dt><dd>7</dd></div><div><dt>Канал / аккаунт</dt><dd>avito / demo-account</dd></div><div><dt>Фото</dt><dd>Тестовый asset_id</dd></div></dl>
+              <p class="small-note">Объект не связан с рекламным макетом выше. Реальные фото в адаптер не загружаются.</p>
+            </div>
+            <div class="pipeline" id="pipeline" aria-live="polite"></div><div class="result-card" id="publication-result" aria-live="polite"></div>
+          </div>
+          <div class="publication-notes" id="scenario-explanation"></div>
+          <details class="json-details"><summary>Входные данные, шаги и результат в JSON</summary><pre id="publication-json"></pre></details>
+        </div>
+        <div class="section-explanation">
+          <h3>Защита от дублей</h3><p>Постоянный внешний Id связан с UUID объекта, каналом и аккаунтом. Повторная постановка возвращает ту же задачу. Изменение цены требует нового согласования содержания.</p>
+          <h3>Таймаут и 409</h3><p>После неопределённого исхода модуль сначала сверяется с приёмником. Конфликт версии при возврате в GP OS приводит к повтору записи advertising, а не к новой публикации.</p>
+          <h3>Что не проверено</h3><p>Официальный адаптер Авито, загрузка фото и production GP OS. Предлагается разрешённая автозагрузка и получение отчётов. Доступность категории, текущую схему, лимиты и тариф нужно подтвердить в аккаунте.</p>
+        </div>
+        <details class="read-more">
+          <summary>Обмен с GP OS, доступы и секреты</summary>
+          <div class="details-content">
+            <div><h4>Предлагаемый контракт</h4><p>Вход: id, version, facts с достоверностью и конфликтами, description, images, approval. Выход: статус, external_id, ссылка, ошибка, content_hash и source_version. GET/PATCH и expectedVersion известны из задания; точная схема advertising не предоставлена.</p><p>Нужны интерфейсы получения фото, сервисная авторизация и событие согласования либо outbox.</p></div>
+            <div><h4>Эксплуатация</h4><p>Mapping, лимиты и расписание хранятся в конфигурации с аудитом. Ключи — в secret manager с минимальными правами. Браузер использует сессию и CSRF; для worker нужен сервисный доступ.</p><p>Для production потребуются распределённые блокировки, мониторинг и проверка полного фида аккаунта: ошибка одной карточки не должна снять остальные объявления.</p></div>
+          </div>
+        </details>
+      </section>
+
+      <section id="delivery" class="task-section">
+        <div class="section-heading"><h2>План внедрения и стоимость</h2><p>Оценка после получения доступов. Условная ставка для расчёта — 2 500 ₽/ч; это не заявленная ставка кандидата. Один разработчик, участие брокера и владельцев систем.</p></div>
+        <div class="table-scroll">
+          <table class="cost-table">
+            <thead><tr><th>Работа и этапы</th><th>Сроки</th><th>Разово</th><th>В месяц</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Мониторинг</strong><small>Источники → история → дубли → отчёт → пилот</small></td><td>44–64 ч<br>7–11 рабочих дней + 14 дней наблюдения</td><td>110–160 тыс. ₽</td><td>11,3–18,5 тыс. ₽ + L</td></tr>
+              <tr><td><strong>Рекламный материал</strong><small>Факты → идея → макет → проверка → согласование</small></td><td>4–6 ч<br>1–2 рабочих дня</td><td>10–15 тыс. ₽</td><td>20–30,5 тыс. ₽ за 8 объектов</td></tr>
+              <tr><td><strong>Автопубликация</strong><small>Контракт → валидация → адаптер → ошибки → приёмка</small></td><td>44–68 ч<br>7–11 рабочих дней</td><td>110–170 тыс. ₽</td><td>10,5–16,5 тыс. ₽ + A</td></tr>
+              <tr><td><strong>Совместная приёмка</strong><small>Права, защита, инструкция, восстановление</small></td><td>8–12 ч<br>1–2 рабочих дня</td><td>20–30 тыс. ₽</td><td>Включена в поддержку</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cost-footnote"><p><strong>Реализация: 100–150 ч / 250–375 тыс. ₽.</strong> Примерно 3–4 рабочие недели без ожидания доступов; наблюдение пилота может идти параллельно.</p><p><strong>Эксплуатация: 41,8–65,5 тыс. ₽/мес. + L + A.</strong> Включает поддержку 8–12 ч/мес., инфраструктуру и 8 материалов. L — лицензии на данные, A — тариф и размещения Авито. Эти суммы неизвестны. Продвижение и новая съёмка не включены.</p></div>
+        <div class="section-explanation">
+          <h3>Необходимые ресурсы</h3><p>Согласованные источники и права на историю, брокер 2–3 ч/нед. для разметки, документация и тестовый контур GP OS, владелец аккаунта Авито. Рабочие ключи для тестового не нужны. Новые платные процессы не запускались.</p>
+          <h3>Использование ИИ</h3><p>Codex применён к проектированию, коду, тексту и SVG-макету. Проверка: тесты, сверка фактов, контроль оригиналов и браузерный просмотр. <a href="notes/ai-log.html">Журнал работы с ИИ</a>.</p>
+          <h3>Автор и доступность</h3><div><p>Абрамян Бен. До 40 часов в неделю. Понедельник–пятница, 09:00–18:00 МСК (UTC+3).</p><p id="start-date" class="quiet">Готов приступить ориентировочно с 9 ноября 2026 года.</p></div>
+        </div>
+      </section>
+
+      <section id="materials" class="task-section">
+        <div class="section-heading"><h2>Файлы и проверка</h2><p id="publication-state">Исходники, ограничения и воспроизводимый запуск. Страница подготовлена локально; публичные ссылки ещё не размещены.</p></div>
+        <div class="delivery-links">
+          <a href="data/verification.json"><span>Автоматические проверки</span><span id="test-count">Результат JSON</span></a>
+          <a href="notes/README.html"><span>README и инструкция запуска</span><span>Открыть</span></a>
+          <a href="notes/worklog.html"><span>Фактическое время работы</span><span>Открыть</span></a>
+          <a href="notes/sources.html"><span>Источники и статус их проверки</span><span>Открыть</span></a>
+        </div>
+        <h3 class="subheading">Запуск из репозитория</h3><p>Python 3.11+ и браузер. Сторонние пакеты, платные API и секреты не требуются.</p>
+        <pre class="run-commands"><code>python -m tools.build
+python -m unittest discover -v
+python -m src.server</code></pre>
+        <details class="read-more">
+          <summary>Скриншоты проверки интерфейса</summary><p class="small-note">Локальный интерфейс: обзор, отчёт, сверка после таймаута и ошибка валидации. Нажмите для просмотра в исходном размере.</p>
+          <div class="photo-gallery evidence-gallery">
+            <a href="assets/evidence/01-overview.jpg"><img src="assets/evidence/01-overview.jpg" alt="Первый экран отчёта" loading="lazy"></a>
+            <a href="assets/evidence/02-monitoring.jpg"><img src="assets/evidence/02-monitoring.jpg" alt="Отчёт при сбое источника" loading="lazy"></a>
+            <a href="assets/evidence/04-publication-timeout.jpg"><img src="assets/evidence/04-publication-timeout.jpg" alt="Выполненная сверка после таймаута" loading="lazy"></a>
+            <a href="assets/evidence/05-publication-validation.jpg"><img src="assets/evidence/05-publication-validation.jpg" alt="Ошибка 422 при неподтверждённых фактах" loading="lazy"></a>
+          </div>
+        </details>
+      </section>
+      <footer class="footer"><span>Абрамян Бен · GlobalPeak · 03.11.2026</span><a href="#overview">К началу</a></footer>
+    </main>
+  </div>
+</body>
+</html>

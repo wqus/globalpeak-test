@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-11-03T08:12:22.927656+00:00",
+  "local_backend_scenarios": [
+    "timeout",
+    "validation",
+    "conflict"
+  ],
+  "static_hosting_replay_checked": true,
+  "static_execution_disabled": true,
+  "csv_matches_selected_day": true,
+  "search_A104_count": 1,
+  "mobile_vacant_filter_count": 2,
+  "mobile_viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "horizontal_page_overflow": false,
+  "viewport_reset": true,
+  "external_integrations_tested": false,
+  "redesign_checked_at": "2026-11-03T08:39:32.304302+00:00",
+  "redesign_viewports": [
+    {
+      "width": 390,
+      "root_scroll_width": 375,
+      "root_client_width": 375
+    },
+    {
+      "width": 1366,
+      "root_scroll_width": 1351,
+      "root_client_width": 1351
+    }
+  ],
+  "redesign_horizontal_overflow": false,
+  "redesign_search_and_csv_checked": true,
+  "redesign_live_scenarios": [
+    "timeout",
+    "validation"
+  ]
+}
