@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-03T09:31:54.190869+00:00",
+  "checked_at": "2026-11-03T09:43:01.746669+00:00",
   "site": "https://wqus.github.io/globalpeak-test/",
   "repository": "https://github.com/wqus/globalpeak-test",
   "authenticated": false,
@@ -287,5 +287,7 @@
       "final_url": "https://wqus.github.io/globalpeak-test/assets/03-terrace.png",
       "mime": "image/png"
     }
-  ]
+  ],
+  "deployed_commit": "c196d3e5689a51de69b465d4a62a4e5cd06d84b7",
+  "workflow_run": "https://github.com/wqus/globalpeak-test/actions/runs/41612987116"
 }
